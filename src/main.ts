@@ -14,7 +14,7 @@ async function bootstrap() {
 
     app.enableCors()
     app.use('/uploads', static_('uploads'))
-    app.use(json({ limit: '200mb' }))
+    app.use(json({ limit: '2mb' }))
     app.useGlobalInterceptors(new TransformInterceptor())
     app.useGlobalFilters(new PrismaClientExceptionFilter(httpAdapter))
     app.useGlobalPipes(
